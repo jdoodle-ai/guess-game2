@@ -5,7 +5,9 @@ def guess_number():
     while True:
         guess = int(input("Guess a number between 1 and 100: "))
         attempts += 1
-        if guess > target:
+        if guess < 1 or guess > 100:
+            print("Invalid guess! Please enter a number between 1 and 100.")
+        elif guess > target:
             print("Too low! Try again.")
         elif guess < target:
             print("Too high! Try again.")
